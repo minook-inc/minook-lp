@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>
+/* ページを移動したときは先頭から表示する（#付きのリンクはその位置へ）。読み込み中に利用者が操作したら、それ以上は戻さない */
+(function(){
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  if(location.hash) return;
+  var touched=false;
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){
+    window.addEventListener(ev,function(){touched=true;},{once:true,passive:true});
+  });
+  function top(){
+    if(touched) return;
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+    try{document.documentElement.scrollIntoView({block:'start',behavior:'instant'});}catch(e){}
+  }
+  top();
+  document.addEventListener('DOMContentLoaded',top);
+  window.addEventListener('load',top);
+  window.addEventListener('pageshow',function(e){if(e.persisted){touched=false;top();}});
+})();
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大人のスマホ・ゲーム｜Minook コラム</title>
+<meta name="description" content="ゲーム・スマホとの付き合い方に悩むご家族へ。公認心理師が運営するMinookのコラムです。">
+<link rel="canonical" href="https://mi-nook.com/column/theme-adult.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="大人のスマホ・ゲーム｜Minook コラム">
+<meta property="og:description" content="ゲーム・スマホとの付き合い方に悩むご家族へ。公認心理師が運営するMinookのコラムです。">
+<meta property="og:url" content="https://mi-nook.com/column/theme-adult.html">
+<meta property="og:site_name" content="Minook">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Minook コラム" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="assets/column.css">
+
+</head>
+<body>
+<header class="nav"><div class="in">
+  <a href="../index.html" class="logo">MINOOK</a>
+  <nav aria-label="メイン"><a class="l" href="index.html">COLUMN</a><a href="../reserve.html#first" class="hd-cta" data-cta="header">無料で相談する</a></nav>
+</div></header>
+<main class="listing">
+<div class="list-hd"><p class="sticker">column</p><h1>大人のスマホ・ゲーム</h1><p>ゲーム・スマホとの付き合い方に悩むご家族へ。公認心理師が運営するMinookのコラムです。</p></div>
+<nav class="chips" aria-label="テーマ"><a href="index.html">すべて</a><a href="theme-talk.html">関わり方・声かけ</a><a href="theme-rules.html">家庭のルール作り</a><a href="theme-school.html">不登校とゲーム</a><a href="theme-signs.html">依存かどうかの見極め</a><a href="theme-consult.html">相談先</a><a href="theme-adult.html" aria-current=page>大人のスマホ・ゲーム</a></nav>
+<p class="empty">記事を準備しています。</p>
+</main>
+<footer class="ft"><div class="in">
+  <div>
+    <a href="../index.html" class="logo">MINOOK</a>
+    <nav aria-label="フッター">
+      <a href="../index.html">トップ</a><a href="index.html">コラム一覧</a><a href="about-ai.html">このコラムの作り方</a>
+      <a href="../legal/tokushoho.html">特定商取引法に基づく表記</a><a href="../legal/terms.html">利用規約</a><a href="../legal/privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+  <small>© 2026 Minook</small>
+</div></footer>
+<script src="assets/column.js" defer></script>
+</body>
+</html>
