@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>
+/* ページを移動したときは先頭から表示する（#付きのリンクはその位置へ）。読み込み中に利用者が操作したら、それ以上は戻さない */
+(function(){
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  if(location.hash) return;
+  var touched=false;
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){
+    window.addEventListener(ev,function(){touched=true;},{once:true,passive:true});
+  });
+  function top(){
+    if(touched) return;
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+    try{document.documentElement.scrollIntoView({block:'start',behavior:'instant'});}catch(e){}
+  }
+  top();
+  document.addEventListener('DOMContentLoaded',top);
+  window.addEventListener('load',top);
+  window.addEventListener('pageshow',function(e){if(e.persisted){touched=false;top();}});
+})();
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと｜Minook コラム</title>
+<meta name="description" content="スマホやゲームの取り上げが逆効果になりやすいのはなぜか。公認心理師が、取り上げる前に家庭で決めておきたい3つのことと、点検表・声かけの言い換え・記入用のルール表をまとめました。">
+<link rel="canonical" href="https://mi-nook.com/column/smartphone-confiscation.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと｜Minook コラム">
+<meta property="og:description" content="スマホやゲームの取り上げが逆効果になりやすいのはなぜか。公認心理師が、取り上げる前に家庭で決めておきたい3つのことと、点検表・声かけの言い換え・記入用のルール表をまとめました。">
+<meta property="og:url" content="https://mi-nook.com/column/smartphone-confiscation.html">
+<meta property="og:site_name" content="Minook">
+<meta property="og:image" content="https://mi-nook.com/column/img/og/smartphone-confiscation.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Minook コラム" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="assets/column.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと", "description": "スマホやゲームの取り上げが逆効果になりやすいのはなぜか。公認心理師が、取り上げる前に家庭で決めておきたい3つのことと、点検表・声かけの言い換え・記入用のルール表をまとめました。", "image": ["https://mi-nook.com/column/img/og/smartphone-confiscation.png"], "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Organization", "name": "Minook 編集部", "url": "https://mi-nook.com/column/about-ai.html"}, "publisher": {"@type": "Organization", "name": "Minook", "url": "https://mi-nook.com", "logo": "https://mi-nook.com/column/assets/logo.png"}, "mainEntityOfPage": "https://mi-nook.com/column/smartphone-confiscation.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://mi-nook.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://mi-nook.com/column/"}, {"@type": "ListItem", "position": 3, "name": "スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと", "item": "https://mi-nook.com/column/smartphone-confiscation.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://mi-nook.com/column/smartphone-confiscation.html", "reviewedBy": {"@type": "Person", "name": "安藤 令奈", "jobTitle": "公認心理師"}, "lastReviewed": "2026-10-24"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "話し合おうとしても、子どもが応じてくれません。", "acceptedAnswer": {"@type": "Answer", "text": "無理に席につかせる必要はありません。「心配していること」と「話したいと思っていること」だけを伝え、子どもが話せるタイミングを待ってください。メモや手紙で伝えるほうが受け取りやすい子もいます。"}}, {"@type": "Question", "name": "約束を何度も破られます。取り上げるしかないのでしょうか。", "acceptedAnswer": {"@type": "Answer", "text": "約束が続かないときは、約束の中身が今の生活に合っていない可能性があります。破ったことを責めるより、どこで守れなくなるのかを一緒に確かめ、守れる形に決め直してください。"}}, {"@type": "Question", "name": "きょうだいで約束を変えてもいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "年齢や生活リズムが違えば、約束が違っても構いません。理由をそれぞれに説明できるようにしておくと、不公平だという気持ちを和らげられます。"}}, {"@type": "Question", "name": "スマホを取り上げる期間は、どれくらいがいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "期間の長さに決まりはありません。長く取り上げるほど、子どもにとっては「いつ戻るか分からない」状態になりやすいので、まずは翌日まで・週末までのように短く区切り、戻す条件と一緒に伝えてください。"}}, {"@type": "Question", "name": "親もついスマホを見てしまいます。", "acceptedAnswer": {"@type": "Answer", "text": "親が完璧である必要はありません。家庭のルール表の「親が守ること」に、無理なく守れることを一つ書くところから始めてください。"}}]}</script>
+</head>
+<body>
+<header class="nav"><div class="in">
+  <a href="../index.html" class="logo">MINOOK</a>
+  <nav aria-label="メイン"><a class="l" href="index.html">COLUMN</a><a href="../reserve.html#first" class="hd-cta" data-cta="header">無料で相談する</a></nav>
+</div></header>
+<main class="article">
+<div class="hero"><div class="hero-in">
+  <nav class="crumbs" aria-label="パンくず"><a href="../index.html">ホーム</a><span>/</span><a href="index.html">コラム</a><span>/</span><a href="theme-talk.html">関わり方・声かけ</a></nav>
+  <p class="hero-theme">関わり方・声かけ</p>
+  <h1>スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと</h1>
+  <p class="meta"><span>Minook 編集部</span><span>公開 2026-10-24</span><span>約10分で読めます</span><span class="badge">公認心理師 監修済み</span></p>
+</div></div>
+<div class="layout">
+  <aside class="toc-side" aria-label="目次"><div class="sticky"><p class="side-h">目次</p><ol><li><a href="#s1">1. スマホ・ゲームの取り上げが逆効果になる3つの条件</a></li><li><a href="#s2">2. 取り上げたあとに起きやすいこと</a></li><li><a href="#s3">3. スマホが「逃げ場」になっていないかを見る</a></li><li><a href="#s4">4. スマホを取り上げる前に確かめたい点検表</a></li><li><a href="#s5">5. 禁止より、約束のほうが続く</a></li><li><a href="#s6">6. 言い合いにならない声かけの言い換え</a></li><li><a href="#s7">7. 家庭のルール表を一緒につくる</a></li><li><a href="#s8">8. それでも預かったほうがよい場面</a></li><li><a href="#s9">9. 話し合いを始める5つの手順</a></li><li><a href="#faq">10. よくある質問</a></li></ol></div></aside>
+  <article class="prose">
+    <img class="eyecatch" src="img/og/smartphone-confiscation.png" alt="取り上げる前に決めておきたい3つのこと" width="1200" height="630">
+    <details class="toc-sp"><summary>目次</summary><ol><li><a href="#s1">1. スマホ・ゲームの取り上げが逆効果になる3つの条件</a></li><li><a href="#s2">2. 取り上げたあとに起きやすいこと</a></li><li><a href="#s3">3. スマホが「逃げ場」になっていないかを見る</a></li><li><a href="#s4">4. スマホを取り上げる前に確かめたい点検表</a></li><li><a href="#s5">5. 禁止より、約束のほうが続く</a></li><li><a href="#s6">6. 言い合いにならない声かけの言い換え</a></li><li><a href="#s7">7. 家庭のルール表を一緒につくる</a></li><li><a href="#s8">8. それでも預かったほうがよい場面</a></li><li><a href="#s9">9. 話し合いを始める5つの手順</a></li><li><a href="#faq">10. よくある質問</a></li></ol></details>
+    <div class="points"><p class="points-h">この記事のポイント</p><ul><li>取り上げが裏目に出やすいのは、<mark>期間・理由・戻す条件</mark>が決まらないまま行われるとき</li><li>取り上げるかどうかより先に、子どもと「約束の形」を決める</li><li>命や安全に関わる場面では、預かることをためらわず、相談先も頼る</li></ul></div>
+    <p>スマホやゲームの取り上げが逆効果になりやすいのは、取り上げる期間、その理由、どうすれば戻るのかが決まらないまま行われるからです。大切なのは取り上げるかどうかではなく、子どもと一緒に「約束の形」を先に決めておくことです。</p>
+<p>夜遅くまでスマホを触っていて、朝起きられない日が続く。声をかけても返事がなく、ついに「もう没収」と手に取る。子どもは大きな声で言い返し、部屋にこもってしまう。翌日には家族の誰かのタブレットを使っていて、親はまた叱る。こうした流れに心当たりのあるご家庭は少なくないと思います。</p>
+<p>この記事では、取り上げが裏目に出やすい条件、スマホが逃げ場になっていないかを振り返る表、取り上げる前に確かめたい点検表、言い合いにならない声かけの言い換え、記入用の家庭のルール表、話し合いを始める手順を用意しました。</p>
+<h2 id="s1"><span class="ch-no">1.</span>スマホ・ゲームの取り上げが逆効果になる3つの条件</h2>
+<p>取り上げたあとに関係がこじれるのは、子どもの反抗心が強いからでも、親の伝え方が下手だからでもありません。次の3つがそろうと、どのような家庭でも裏目に出やすくなります。</p>
+<p>1つ目は、<strong>突然であること</strong>です。対戦の途中や、友だちとやり取りしている最中に取り上げられると、子どもにとっては友だちとの約束を破ることにもなります。怒りは、取り上げられたことより「話も聞いてもらえなかった」ことに向かいます。</p>
+<p>2つ目は、<strong>理由が伝わっていないこと</strong>です。親の側には「朝起きられない」「成績が下がった」という理由があっても、取り上げる瞬間にはそれが言葉になっていないことがよくあります。子どもには、親の機嫌で決まったように見えます。</p>
+<p>3つ目は、<strong>戻る条件がないこと</strong>です。いつ返ってくるのか、何をすれば返ってくるのかが分からないと、子どもにできることは「返して」と言い続けるか、隠れて使うかのどちらかになります。</p>
+<p><mark>取り上げそのものより、取り上げ方が関係を左右します</mark>。逆に言えば、この3つを先に決めておけば、預かることが必要な場面でも、話し合いの余地を残せます。</p>
+<h2 id="s2"><span class="ch-no">2.</span>取り上げたあとに起きやすいこと</h2>
+<p>条件がそろわないまま取り上げると、家庭の中では次のようなことが起きやすくなります。</p>
+<ul>
+<li>家族の端末や友だちの家など、別の場所で使うようになる</li>
+<li>使っている時間が見えなくなり、かえって様子が分からなくなる</li>
+<li>親子の会話が「返して」「だめ」のやり取りだけになる</li>
+<li>取り上げを避けるために、困ったことがあっても親に話さなくなる</li>
+</ul>
+<p>最後の点は特に気をつけたいところです。ネット上で嫌な目にあったときや、課金で困ったときに、子どもが最初に相談できる相手が親であることは大きな支えになります。取り上げが「話したら取られる」という経験になると、その窓口が閉じてしまいます。</p>
+<h2 id="s3"><span class="ch-no">3.</span>スマホが「逃げ場」になっていないかを見る</h2>
+<p>使う時間が増えているとき、スマホやゲームそのものより先に見ておきたいことがあります。それは、<mark>スマホが何かのつらさから離れるための場所になっていないか</mark>ということです。</p>
+<p>授業についていけなくなった、友だちとの関係がうまくいっていない、家の中で気の休まる時間がない。こうしたつらさを抱えているとき、スマホやゲームは、いやなことを考えずにいられる数少ない場所になります。この状態で取り上げると、子どもからは逃げ場だけが奪われ、つらさはそのまま残ります。怒りが強く出るのは、そのためでもあります。</p>
+<p>逃げ場になっているかどうかは、使っている時間の長さだけでは分かりません。次のような変化が重なっていないかを、取り上げを考える前に振り返ってみてください。</p>
+<div class="tpl"><div class="tpl-h"><span>使い方の背景を振り返る表（記入用）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>振り返ること</th>
+<th>最近の様子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学校や友だちの話を、前よりしなくなった</td>
+<td></td>
+</tr>
+<tr>
+<td>宿題やテストの話題になると、スマホに手が伸びる</td>
+<td></td>
+</tr>
+<tr>
+<td>休日より、学校のある日の夜に長く使っている</td>
+<td></td>
+</tr>
+<tr>
+<td>寝つきや朝の起きにくさが、前より目立つ</td>
+<td></td>
+</tr>
+<tr>
+<td>好きだったことや、家族との時間に関心が薄れている</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>これは診断のための表ではありません。当てはまる項目があっても、それだけで何かが決まるわけではなく、<mark>背景にあるつらさに目を向けるきっかけ</mark>として使ってください。</p>
+<p>背景を確かめるときは、スマホの話から入らないほうが話しやすくなります。</p>
+<div class="compare"><div class="cmp-row"><p class="cmp-no">01</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>スマホばっかり触って、何か隠してるんじゃないの？</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>最近、学校で疲れることが多い？ 話したくなったら、いつでも聞くよ。</p></div><p class="cmp-why"><b>ポイント</b>疑いから入らず、話すかどうかは子どもに委ねる</p></div><div class="cmp-row"><p class="cmp-no">02</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>勉強しないからスマホを取り上げるよ。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>授業で分かりにくいところがあるなら、どうしたらいいか一緒に考えたい。</p></div><p class="cmp-why"><b>ポイント</b>罰ではなく、困りごとを一緒に片づける話にする</p></div></div>
+
+<p>つらさの中身が見えてきたら、取り組む相手はスマホではなく、そのつらさのほうです。勉強のつまずきなら学習の手立てを、友だち関係なら担任の先生やスクールカウンセラーへの相談を考えます。気分の落ち込みや眠れない状態が続くようなときは、医療機関に相談してください。診断や治療は医療機関で行います。</p>
+<h2 id="s4"><span class="ch-no">4.</span>スマホを取り上げる前に確かめたい点検表</h2>
+<p>取り上げを考えたときは、手に取る前に次の表を確かめてください。「いいえ」が2つ以上あるときは、取り上げる前に話し合いの時間をとるほうが、結果的に早く落ち着くことがあります。</p>
+<div class="tpl"><div class="tpl-h"><span>取り上げる前の点検表（記入用）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>点検すること</th>
+<th>はい／いいえ</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取り上げる理由を、一文で子どもに説明できる</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>取り上げる期間を決めている</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>何をすれば戻るのかを決めている</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>子どもの言い分を聞く時間をとった</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>親の気持ちが落ち着いている</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>最後の項目は意外と大切です。怒りが強いときに決めた約束は、厳しくなりすぎたり、あとで親の側が守れなくなったりします。その場では「あとで話そう」とだけ伝え、時間をおいてから決めても遅くありません。</p>
+<h2 id="s5"><span class="ch-no">5.</span>禁止より、約束のほうが続く</h2>
+<p>取り上げや禁止は、親が一方的に決めるルールです。一方で約束は、子どもと一緒に決めるルールです。<mark>子どもが自分の言葉で決めたことのほうが、守られやすくなります</mark>。</p>
+<p>約束にするときは、「何時まで」だけでなく、「守れなかったときにどうするか」まで決めておきます。守れなかったときの扱いが決まっていないと、そのたびに親が判断することになり、結局は取り上げと同じ「親の機嫌で決まる」形に戻ってしまいます。</p>
+<p>また、約束は一度決めたら終わりではありません。部活が始まる、テスト期間に入るなど、生活が変われば約束も変わって当然です。見直す日を最初に決めておくと、子どもも「いまは我慢しても、話し合える日がある」と思えます。</p>
+<div class="cta-inline only-sp"><div class="cta"><p class="cta-k">初回30分無料</p><p>ご家庭の状況に合わせて考えたいときは、公認心理師にご相談いただけます。</p><a href="../reserve.html#first" class="btn" data-cta="inline">相談の予約をする</a></div></div><h2 id="s6"><span class="ch-no">6.</span>言い合いにならない声かけの言い換え</h2>
+<p>同じ内容でも、言い方によって子どもの受け取り方は大きく変わります。次の言い換えは、取り上げを考えた場面でそのまま使えるものです。</p>
+<div class="compare"><div class="cmp-row"><p class="cmp-no">01</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>もう没収。しばらく使わせないから。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>朝起きられない日が続いているのが心配なんだ。夜の使い方を一緒に決め直したい。</p></div><p class="cmp-why"><b>ポイント</b>取り上げる理由を、責める言葉ではなく「心配」として伝える</p></div><div class="cmp-row"><p class="cmp-no">02</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>何回言ったら分かるの。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>約束の時間を過ぎているよ。区切りがつくまで、あとどのくらいかかりそう？</p></div><p class="cmp-why"><b>ポイント</b>過去を責めず、いまの事実と、やめどきの相談だけを伝える</p></div><div class="cmp-row"><p class="cmp-no">03</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>返してほしければ、ちゃんとしなさい。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>今週、夜11時までに充電の場所に置けたら、週末は元の約束に戻そう。</p></div><p class="cmp-why"><b>ポイント</b>戻す条件を、親子で同じように判断できる行動で示す</p></div></div>
+
+<p>3つに共通するのは、親が困っていることを「心配」として伝えることと、戻る条件を具体的な行動で示すことです。「ちゃんとする」は人によって意味が違いますが、「夜11時までに充電の場所に置く」なら、子どもも親も同じように判断できます。</p>
+<h2 id="s7"><span class="ch-no">7.</span>家庭のルール表を一緒につくる</h2>
+<p>約束は、紙やメモに残しておくと、言った・言わないの言い合いを減らせます。下の表を印刷するか、コピーして家族のメモアプリに貼り、子どもと一緒に埋めてください。</p>
+<div class="tpl"><div class="tpl-h"><span>家庭のルール表（記入用）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>決めること</th>
+<th>わが家の約束</th>
+<th>見直す日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平日に使う時間帯</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>寝る前に端末を置く場所</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>約束を守れなかったときにすること</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>預かることになる場面と、その期間</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>親が守ること</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>以下は架空の記入例です。中学生の子どもと保護者が話し合って決めた場合を想定しています。</p>
+<div class="tpl"><div class="tpl-h"><span>家庭のルール表（記入例・架空）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>決めること</th>
+<th>わが家の約束</th>
+<th>見直す日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平日に使う時間帯</td>
+<td>宿題が終わってから、夜10時半まで</td>
+<td>1か月後の日曜日</td>
+</tr>
+<tr>
+<td>寝る前に端末を置く場所</td>
+<td>夜11時までにリビングの充電台に置く</td>
+<td>1か月後の日曜日</td>
+</tr>
+<tr>
+<td>約束を守れなかったときにすること</td>
+<td>次の日は夜10時までにする。続いたら一緒に約束を見直す</td>
+<td>守れなかった週の週末</td>
+</tr>
+<tr>
+<td>預かることになる場面と、その期間</td>
+<td>夜中に使っていた日は、次の日の夜だけ親が預かる</td>
+<td>1か月後の日曜日</td>
+</tr>
+<tr>
+<td>親が守ること</td>
+<td>食事中は親もスマホを触らない。約束の時間内は口を出さない</td>
+<td>1か月後の日曜日</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>「親が守ること」の欄は省かないでください。ルールが子どもにだけ課されると、約束ではなく取り締まりに見えます。親も同じ表の中で約束することで、話し合いの席が対等になります。</p>
+<h2 id="s8"><span class="ch-no">8.</span>それでも預かったほうがよい場面</h2>
+<p>約束を基本にしていても、子どもの安全を守るために、すぐに預かったほうがよい場面はあります。たとえば、知らない大人から会おうと誘われている、高額な課金が続いている、夜通しの利用で学校に行けない日が続いている、といった場面です。</p>
+<p>そのようなときは、ためらわずに預かってください。そのうえで、<mark>理由・期間・戻す条件を、落ち着いてから言葉にして伝える</mark>ことが大切です。「あなたを罰したいのではなく、守りたい」という意図が伝われば、取り上げは関係を壊すものではなくなります。</p>
+<p>一方で、取り上げをきっかけに物を壊す、家族に手を上げるなど、家庭の中だけで対応するのが難しい状況もあります。そのときは家族だけで抱え込まず、この記事の最後にある相談先や、お住まいの地域の窓口を頼ってください。</p>
+<h2 id="s9"><span class="ch-no">9.</span>話し合いを始める5つの手順</h2>
+<p>取り上げや約束の話し合いは、勢いで始めるとうまくいきにくいものです。次の手順で、落ち着いたタイミングに始めてください。</p>
+<div class="steps"><p class="steps-h">話し合いの進め方</p><ol><li><b>時間をとる</b><p>叱った直後ではなく、週末の昼など、お互いに落ち着いている時間を選びます。</p></li><li><b>心配を伝える</b><p>「朝起きられないのが心配」のように、責める言葉ではなく親が困っていることを伝えます。</p></li><li><b>子どもの事情を聞く</b><p>友だちとの約束や、やめにくい場面があるかを聞きます。途中で反論せず、最後まで聞きます。</p></li><li><b>表を一緒に埋める</b><p>家庭のルール表を見ながら、子どもに案を出してもらいます。親の案は、子どもの案のあとに出します。</p></li><li><b>見直す日を決める</b><p>最後に、約束を見直す日を決めて表に書きます。うまくいかなくても、その日に直せば大丈夫です。</p></li></ol></div>
+
+<p>取り上げるか、取り上げないかで悩むとき、親は「甘すぎるのか」「厳しすぎるのか」と自分を責めがちです。けれど、こじれる原因の多くは親の性格ではなく、期間・理由・戻す条件が決まっていないという仕組みの側にあります。仕組みは、今夜からでも話し合って変えられます。</p>
+<h2 id="faq"><span class="ch-no">10.</span>よくある質問</h2>
+<div class="faq"><details><summary>話し合おうとしても、子どもが応じてくれません。</summary><div>無理に席につかせる必要はありません。「心配していること」と「話したいと思っていること」だけを伝え、子どもが話せるタイミングを待ってください。メモや手紙で伝えるほうが受け取りやすい子もいます。</div></details><details><summary>約束を何度も破られます。取り上げるしかないのでしょうか。</summary><div>約束が続かないときは、約束の中身が今の生活に合っていない可能性があります。破ったことを責めるより、どこで守れなくなるのかを一緒に確かめ、守れる形に決め直してください。</div></details><details><summary>きょうだいで約束を変えてもいいですか。</summary><div>年齢や生活リズムが違えば、約束が違っても構いません。理由をそれぞれに説明できるようにしておくと、不公平だという気持ちを和らげられます。</div></details><details><summary>スマホを取り上げる期間は、どれくらいがいいですか？</summary><div>期間の長さに決まりはありません。長く取り上げるほど、子どもにとっては「いつ戻るか分からない」状態になりやすいので、まずは翌日まで・週末までのように短く区切り、戻す条件と一緒に伝えてください。</div></details><details><summary>親もついスマホを見てしまいます。</summary><div>親が完璧である必要はありません。家庭のルール表の「親が守ること」に、無理なく守れることを一つ書くところから始めてください。</div></details></div>
+    <aside class="crisis" id="crisis"><h2>いま、危険を感じているときは</h2><p>ご本人やご家族の命や安全に関わる状況では、このコラムを読むよりも先に、すぐに相談してください。</p><table><tr><th>命に関わる緊急時</th><td><b>119番（救急）／110番（警察）</b></td></tr><tr><th>#いのちSOS</th><td><b>0120-061-338</b><small>24時間・毎日</small></td></tr><tr><th>よりそいホットライン</th><td><b>0120-279-338</b><small>24時間（福島県からは 0120-279-226）</small></td></tr><tr><th>24時間子供SOSダイヤル</th><td><b>0120-0-78310</b><small>24時間・無料。子どもと保護者の相談</small></td></tr><tr><th>児童相談所虐待対応ダイヤル</th><td><b>189</b><small>24時間・無料</small></td></tr></table><p class="small">番号・受付時間は2026年10月14日時点のものです。</p></aside>
+    <div class="cta-end"><div class="cta"><p class="cta-k">初回30分無料</p><p>ご家庭の状況に合わせて考えたいときは、公認心理師にご相談いただけます。</p><a href="../reserve.html#first" class="btn" data-cta="end">相談の予約をする</a></div></div>
+    <div class="sp-only-side"><div class="op"><p class="side-h">運営者</p><div class="op-in"><img src="../img/counselor.jpg" alt="" width="56" height="56" loading="lazy"><div><p class="op-name">安藤 令奈<span>公認心理師</span></p><p class="op-sum">久里浜医療センター「インターネット／ゲーム依存の診断・治療等に関する研修」「ネット、ゲーム、スマホ依存の予防・対応に関する研修」修了。東京大学大学院 修了。</p><a href="../index.html#counselor">プロフィールを見る</a></div></div></div><div class="rel"><p class="side-h">あわせて読みたい</p><ul><li><a href="where-to-consult.html">ゲーム依存が心配なときの相談先｜子どもと家族のための選び方</a></li><li><a href="smartphone-rules.html">中学生のスマホルールが守られない理由｜続く決め方とテンプレート</a></li></ul></div></div>
+  </article>
+  <aside class="rail"><div class="sticky"><div class="cta"><p class="cta-k">初回30分無料</p><p>ご家庭の状況に合わせて考えたいときは、公認心理師にご相談いただけます。</p><a href="../reserve.html#first" class="btn" data-cta="rail">相談の予約をする</a></div><div class="op"><p class="side-h">運営者</p><div class="op-in"><img src="../img/counselor.jpg" alt="" width="56" height="56" loading="lazy"><div><p class="op-name">安藤 令奈<span>公認心理師</span></p><p class="op-sum">久里浜医療センター「インターネット／ゲーム依存の診断・治療等に関する研修」「ネット、ゲーム、スマホ依存の予防・対応に関する研修」修了。東京大学大学院 修了。</p><a href="../index.html#counselor">プロフィールを見る</a></div></div></div><div class="rel"><p class="side-h">あわせて読みたい</p><ul><li><a href="where-to-consult.html">ゲーム依存が心配なときの相談先｜子どもと家族のための選び方</a></li><li><a href="smartphone-rules.html">中学生のスマホルールが守られない理由｜続く決め方とテンプレート</a></li></ul></div></div></aside>
+</div>
+</main>
+<footer class="ft"><div class="in">
+  <div>
+    <a href="../index.html" class="logo">MINOOK</a>
+    <nav aria-label="フッター">
+      <a href="../index.html">トップ</a><a href="index.html">コラム一覧</a><a href="about-ai.html">このコラムの作り方</a>
+      <a href="../legal/tokushoho.html">特定商取引法に基づく表記</a><a href="../legal/terms.html">利用規約</a><a href="../legal/privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+  <small>© 2026 Minook</small>
+</div></footer>
+<script src="assets/column.js" defer></script>
+</body>
+</html>

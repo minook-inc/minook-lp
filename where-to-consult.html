@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>
+/* ページを移動したときは先頭から表示する（#付きのリンクはその位置へ）。読み込み中に利用者が操作したら、それ以上は戻さない */
+(function(){
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  if(location.hash) return;
+  var touched=false;
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){
+    window.addEventListener(ev,function(){touched=true;},{once:true,passive:true});
+  });
+  function top(){
+    if(touched) return;
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+    try{document.documentElement.scrollIntoView({block:'start',behavior:'instant'});}catch(e){}
+  }
+  top();
+  document.addEventListener('DOMContentLoaded',top);
+  window.addEventListener('load',top);
+  window.addEventListener('pageshow',function(e){if(e.persisted){touched=false;top();}});
+})();
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ゲーム依存が心配なときの相談先｜子どもと家族のための選び方｜Minook コラム</title>
+<meta name="description" content="子どものゲーム依存が心配でも、どこに相談すればいいか分からない。公認心理師が、困りごとから相談先を選ぶ方法、家族だけで相談するときの進め方、相談の前に使える記入用メモをまとめました。">
+<link rel="canonical" href="https://mi-nook.com/column/where-to-consult.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="ゲーム依存が心配なときの相談先｜子どもと家族のための選び方｜Minook コラム">
+<meta property="og:description" content="子どものゲーム依存が心配でも、どこに相談すればいいか分からない。公認心理師が、困りごとから相談先を選ぶ方法、家族だけで相談するときの進め方、相談の前に使える記入用メモをまとめました。">
+<meta property="og:url" content="https://mi-nook.com/column/where-to-consult.html">
+<meta property="og:site_name" content="Minook">
+<meta property="og:image" content="https://mi-nook.com/column/img/og/where-to-consult.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Minook コラム" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="assets/column.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム依存が心配なときの相談先｜子どもと家族のための選び方", "description": "子どものゲーム依存が心配でも、どこに相談すればいいか分からない。公認心理師が、困りごとから相談先を選ぶ方法、家族だけで相談するときの進め方、相談の前に使える記入用メモをまとめました。", "image": ["https://mi-nook.com/column/img/og/where-to-consult.png"], "datePublished": "2026-10-30", "dateModified": "2026-10-30", "author": {"@type": "Organization", "name": "Minook 編集部", "url": "https://mi-nook.com/column/about-ai.html"}, "publisher": {"@type": "Organization", "name": "Minook", "url": "https://mi-nook.com", "logo": "https://mi-nook.com/column/assets/logo.png"}, "mainEntityOfPage": "https://mi-nook.com/column/where-to-consult.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://mi-nook.com/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://mi-nook.com/column/"}, {"@type": "ListItem", "position": 3, "name": "ゲーム依存が心配なときの相談先｜子どもと家族のための選び方", "item": "https://mi-nook.com/column/where-to-consult.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://mi-nook.com/column/where-to-consult.html", "reviewedBy": {"@type": "Person", "name": "安藤 令奈", "jobTitle": "公認心理師"}, "lastReviewed": "2026-10-30"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "相談にお金はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "精神保健福祉センターや保健所などの公的な窓口は、費用がかからないところが多いですが、念のため確かめてください。医療機関は保険診療で受けられます。民間のカウンセリングは自費になるため、事前に料金を確かめてください。"}}, {"@type": "Question", "name": "本人に内緒で相談してもいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "家族だけで相談すること自体は問題ありません。ただ、あとで本人に知られて信頼が揺らぐこともあるため、相談したことをどう伝えるかも、相談の場で一緒に考えてもらうとよいと思います。"}}, {"@type": "Question", "name": "学校に相談すると、子どもの評価に響きませんか？", "acceptedAnswer": {"@type": "Answer", "text": "心配な場合は、まずスクールカウンセラーに相談したい内容を伝え、担任の先生と情報をどこまで共有するかを確かめてから話すと安心です。"}}, {"@type": "Question", "name": "ゲーム依存の相談は、病院なら何科に行けばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "児童精神科や精神科、ネット・ゲーム・スマホ依存の専門外来が窓口になります。どこに行けばよいか迷うときは、かかりつけの小児科や地域の精神保健福祉センターに相談して、紹介してもらう方法もあります。"}}, {"@type": "Question", "name": "オンラインで相談できるところはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "電話相談を受けている公的な窓口のほか、オンラインで家族の相談を受けている民間のカウンセリングもあります。Minookでも、ご家族だけのオンライン相談をお受けしています。"}}]}</script>
+</head>
+<body>
+<header class="nav"><div class="in">
+  <a href="../index.html" class="logo">MINOOK</a>
+  <nav aria-label="メイン"><a class="l" href="index.html">COLUMN</a><a href="../reserve.html#first" class="hd-cta" data-cta="header">無料で相談する</a></nav>
+</div></header>
+<main class="article">
+<div class="hero"><div class="hero-in">
+  <nav class="crumbs" aria-label="パンくず"><a href="../index.html">ホーム</a><span>/</span><a href="index.html">コラム</a><span>/</span><a href="theme-consult.html">相談先</a></nav>
+  <p class="hero-theme">相談先</p>
+  <h1>ゲーム依存が心配なときの相談先｜子どもと家族のための選び方</h1>
+  <p class="meta"><span>Minook 編集部</span><span>公開 2026-10-30</span><span>約8分で読めます</span><span class="badge">公認心理師 監修済み</span></p>
+</div></div>
+<div class="layout">
+  <aside class="toc-side" aria-label="目次"><div class="sticky"><p class="side-h">目次</p><ol><li><a href="#s1">1. 相談するのに「早すぎる」ことはない</a></li><li><a href="#s2">2. ゲーム・スマホの悩み別の相談先の選び方</a></li><li><a href="#s3">3. 本人が行きたがらなくても、家族だけで相談できる窓口がある</a></li><li><a href="#s4">4. 相談の前に書いておきたいメモ</a></li><li><a href="#s5">5. 医療機関への相談を考えたいとき</a></li><li><a href="#s6">6. 相談までの4つの手順</a></li><li><a href="#faq">7. よくある質問</a></li></ol></div></aside>
+  <article class="prose">
+    <img class="eyecatch" src="img/og/where-to-consult.png" alt="ゲーム・スマホの悩みどこに相談すればいい？" width="1200" height="630">
+    <details class="toc-sp"><summary>目次</summary><ol><li><a href="#s1">1. 相談するのに「早すぎる」ことはない</a></li><li><a href="#s2">2. ゲーム・スマホの悩み別の相談先の選び方</a></li><li><a href="#s3">3. 本人が行きたがらなくても、家族だけで相談できる窓口がある</a></li><li><a href="#s4">4. 相談の前に書いておきたいメモ</a></li><li><a href="#s5">5. 医療機関への相談を考えたいとき</a></li><li><a href="#s6">6. 相談までの4つの手順</a></li><li><a href="#faq">7. よくある質問</a></li></ol></details>
+    <div class="points"><p class="points-h">この記事のポイント</p><ul><li>相談先は「依存かどうか」ではなく、<mark>いま何に困っているか</mark>で選ぶ</li><li>本人が行きたがらなくても、<mark>家族だけで相談できる場所</mark>がある</li><li>相談の前に、いつから・何に困っているかをメモしておくと話が進む</li></ul></div>
+    <p>子どものゲーム依存が心配なときや、スマホの使い方で相談したいときは、「依存症かどうか」を先に見極めようとするより、「いま家庭で何に困っているか」から相談先を選ぶほうが、話が早く進みます。本人が行きたがらなくても、家族だけで相談できる場所はあります。</p>
+<p>夜中までゲームをしていて、朝起きられない日が続いている。注意すると言い合いになり、家の空気が重い。誰かに相談したいけれど、病院に行くほどなのか、学校に話していいのか分からず、そのまま時間が過ぎていく。こうした迷いを抱えている保護者の方は少なくありません。</p>
+<p>この記事では、相談を考えてよい目安、困りごと別の相談先の選び方、本人が行きたがらないときの進め方、相談の前に書いておくと話が進む記入用メモ、相談までの手順を用意しました。</p>
+<h2 id="s1"><span class="ch-no">1.</span>相談するのに「早すぎる」ことはない</h2>
+<p>相談をためらう理由として多いのが、「まだ相談するほどではないかもしれない」という迷いです。けれど、相談は「依存症になってから」行くものではありません。<mark>家族が困っていると感じた時点で、相談してよい</mark>と考えてください。</p>
+<p>目安にしやすいのは、使っている時間の長さよりも、生活への影響です。たとえば次のようなことが続いているなら、一度だれかに話してみるきっかけになります。</p>
+<ul>
+<li>夜遅くまで使っていて、朝起きられない日が続いている</li>
+<li>学校や部活を休む日が増えている</li>
+<li>使い方の話になると、言い合いや物に当たることが続いている</li>
+<li>課金など、お金のことで困りごとが起きている</li>
+<li>家族が疲れていて、どう関わればいいか分からなくなっている</li>
+</ul>
+<p>最後の項目も、立派な相談の理由です。相談先は、子どもを診るところであると同時に、困っている家族を支えるところでもあります。</p>
+<h2 id="s2"><span class="ch-no">2.</span>ゲーム・スマホの悩み別の相談先の選び方</h2>
+<p>相談先は、いま一番困っていることに合わせて選ぶと迷いにくくなります。次の表は、よくある困りごとと、最初に相談しやすい窓口の組み合わせです。</p>
+<table>
+<thead>
+<tr>
+<th>いま一番困っていること</th>
+<th>最初に相談しやすいところ</th>
+<th>相談できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学校を休む日が増えている</td>
+<td>担任の先生、スクールカウンセラー</td>
+<td>学校での様子の共有、登校についての相談</td>
+</tr>
+<tr>
+<td>家庭での関わり方が分からない</td>
+<td>精神保健福祉センター、保健所の依存症相談</td>
+<td>家族からの相談、家族向けの教室の案内</td>
+</tr>
+<tr>
+<td>眠れない・気分の落ち込みが続く</td>
+<td>医療機関（児童精神科、精神科、ネット・ゲーム・スマホ依存の専門外来）</td>
+<td>診察、心と体の状態の確認</td>
+</tr>
+<tr>
+<td>同じ悩みの家族と話したい</td>
+<td>家族会</td>
+<td>経験の分かち合い</td>
+</tr>
+<tr>
+<td>継続して関わり方を一緒に考えたい</td>
+<td>民間のカウンセリング</td>
+<td>家族の関わり方の相談（診断・治療は行わない）</td>
+</tr>
+</tbody>
+</table>
+<p>精神保健福祉センターは、都道府県や政令指定都市に置かれている公的な相談窓口で、ネットやゲームを含む依存の相談を、本人だけでなく家族からも受けているところがあります。まずは電話で、家族だけで相談できるか、予約が必要かを確かめると確実です。</p>
+<p>医療機関を探すときは、久里浜医療センターが公表している「ゲーム障害・ネット依存・スマホ依存の治療施設リスト」が手がかりになります。2026年8月の時点で、リストには全国116の施設が載っています。ただし地域による差が大きく、近くにない県もあるため、まずは地域の精神保健福祉センターに相談し、紹介してもらうのも一つの方法です。医療機関での受診は、ほかの病気と同じように保険診療で受けられます。</p>
+<h2 id="s3"><span class="ch-no">3.</span>本人が行きたがらなくても、家族だけで相談できる窓口がある</h2>
+<p>「本人が行かないと意味がないのでは」と考えて、相談を先延ばしにしてしまう家族は少なくありません。けれど、本人がすぐには相談に向かわないのは、珍しいことではありません。ネット・ゲーム依存の専門治療施設を対象にした調査（令和5年度、81施設が回答）では、困りごととして「患者本人が来院しない」を挙げた施設が<mark>44.4%</mark>ありました。</p>
+<p>本人が来ない状態は、相談先にとっても想定の範囲です。家族だけで相談に行き、家庭での関わり方を整えることは、それ自体が大切な一歩になります。家族の関わり方が変わることで、家の中の言い合いが減り、本人が話を聞きやすくなることもあります。</p>
+<p>本人に相談のことを伝えるときは、責める形にしないことが大切です。</p>
+<div class="compare"><div class="cmp-row"><p class="cmp-no">01</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>依存症かもしれないから、病院に連れて行くからね。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>家族として困っていることがあって、相談に行ってみようと思うんだ。一緒に来てくれたらうれしいけど、無理にとは言わないよ。</p></div><p class="cmp-why"><b>ポイント</b>本人を問題扱いせず、親が自分のために相談する形で伝える</p></div><div class="cmp-row"><p class="cmp-no">02</p><div class="cmp-pair"><p class="cmp-ng"><span>よくある言い方</span>このままだとまずいから、カウンセリングを受けなさい。</p><p class="cmp-arrow" aria-hidden="true">→</p><p class="cmp-ok"><span>言い換えると</span>最近、夜遅くまで起きている日が続いていて心配なんだ。話を聞いてくれる人がいるみたいだから、気が向いたら教えて。</p></div><p class="cmp-why"><b>ポイント</b>心配を事実で伝え、行くかどうかの判断は子どもに残す</p></div></div>
+
+<div class="cta-inline"><div class="cta strong"><p class="cta-k">初回30分無料</p><p>ひとりで抱えず、まずは30分話してみませんか。ご家族だけのご相談もお受けしています。</p><a href="../reserve.html#first" class="btn" data-cta="inline">相談の予約をする</a></div></div><h2 id="s4"><span class="ch-no">4.</span>相談の前に書いておきたいメモ</h2>
+<p>相談の場では、緊張して言いたいことの半分も話せなかった、ということがよくあります。次のメモを相談の前に埋めておくと、限られた時間でも状況が伝わりやすくなります。全部埋まらなくても構いません。</p>
+<div class="tpl"><div class="tpl-h"><span>相談の前に整理しておくメモ（記入用）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>整理すること</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>いつごろから気になっているか</td>
+<td></td>
+</tr>
+<tr>
+<td>平日の1日の過ごし方（起きる時刻・寝る時刻・使っている時間帯）</td>
+<td></td>
+</tr>
+<tr>
+<td>いま一番困っていること</td>
+<td></td>
+</tr>
+<tr>
+<td>これまでに家庭で試したこと（うまくいったこと・いかなかったこと）</td>
+<td></td>
+</tr>
+<tr>
+<td>本人の様子や、本人が話していること</td>
+<td></td>
+</tr>
+<tr>
+<td>家族の気持ちや、疲れていること</td>
+<td></td>
+</tr>
+<tr>
+<td>相談で知りたいこと</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>以下は架空の記入例です。中学2年生の子どもについて、保護者が相談の前に書いた場合を想定しています。</p>
+<div class="tpl"><div class="tpl-h"><span>相談の前に整理しておくメモ（記入例・架空）</span><button type="button" class="copy">コピー</button></div><table>
+<thead>
+<tr>
+<th>整理すること</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>いつごろから気になっているか</td>
+<td>夏休みの終わりごろから</td>
+</tr>
+<tr>
+<td>平日の1日の過ごし方（起きる時刻・寝る時刻・使っている時間帯）</td>
+<td>7時半に起きられない日が週3日。夜は1時ごろまでゲームをしている</td>
+</tr>
+<tr>
+<td>いま一番困っていること</td>
+<td>朝起きられず、遅刻が増えている。注意すると言い合いになる</td>
+</tr>
+<tr>
+<td>これまでに家庭で試したこと（うまくいったこと・いかなかったこと）</td>
+<td>一度スマホを取り上げたが、家族のタブレットを使うようになった</td>
+</tr>
+<tr>
+<td>本人の様子や、本人が話していること</td>
+<td>「友だちと約束している」と言う。学校の話はあまりしない</td>
+</tr>
+<tr>
+<td>家族の気持ちや、疲れていること</td>
+<td>毎晩の言い合いで、母親が疲れている</td>
+</tr>
+<tr>
+<td>相談で知りたいこと</td>
+<td>夜の使い方をどう話し合えばいいか。病院に行ったほうがいいか</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>相談では、「うちの子は依存症ですか」と診断名から尋ねるより、メモにあるような事実を伝えるほうが、相談先も状況をつかみやすくなります。<mark>困っている場面を具体的に話す</mark>ことが、合った助言につながります。家庭での取り上げやルール作りについては、<a href="smartphone-confiscation.html">スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと</a>や<a href="smartphone-rules.html">中学生のスマホルールが守られない理由｜続く決め方とテンプレート</a>も参考にしてください。</p>
+<h2 id="s5"><span class="ch-no">5.</span>医療機関への相談を考えたいとき</h2>
+<p>家庭での関わり方の相談と並行して、医療機関に相談したほうがよい場面もあります。たとえば、眠れない状態や気分の落ち込みが続いているとき、食事がとれないとき、物を壊す・家族に手を上げるといったことが続くときです。</p>
+<p>診断や治療は医療機関で行います。カウンセリングや家族の相談窓口は、診断をつける場所ではありません。迷ったときは、精神保健福祉センターやかかりつけの小児科に「どこに相談したらよいか」をそのまま尋ねてかまいません。</p>
+<p>命や安全に関わる状況では、相談先を選んでいる時間はありません。この記事の最後にある緊急時の相談先に、すぐに連絡してください。</p>
+<h2 id="s6"><span class="ch-no">6.</span>相談までの4つの手順</h2>
+<p>最後に、初めて相談するときの進め方です。</p>
+<div class="steps"><p class="steps-h">初めて相談するまでの進め方</p><ol><li><b>メモを書く</b><p>上の記入用メモを、分かるところだけ埋めます。家族で話し合いながら書くと、困りごとが整理されます。</p></li><li><b>相談先を1つ選ぶ</b><p>表の中から、いま一番困っていることに合う相談先を1つ選びます。迷ったら、地域の精神保健福祉センターから始めます。</p></li><li><b>電話で確かめる</b><p>家族だけで相談できるか、予約が必要か、費用がかかるかを確かめます。</p></li><li><b>相談のあとに振り返る</b><p>相談で聞いたことと、家庭で試すことを1つだけ決めて、メモに書き足します。</p></li></ol></div>
+
+<p>子どものことで相談に行くのは、親として力が足りないからではありません。困りごとを一人で抱え込まず、外の力を借りることは、子どもと家族の毎日を立て直すための、ごく自然な選択です。迷っているなら、まずはメモを1枚書くところから始めてみてください。</p>
+<h2 id="faq"><span class="ch-no">7.</span>よくある質問</h2>
+<div class="faq"><details><summary>相談にお金はかかりますか？</summary><div>精神保健福祉センターや保健所などの公的な窓口は、費用がかからないところが多いですが、念のため確かめてください。医療機関は保険診療で受けられます。民間のカウンセリングは自費になるため、事前に料金を確かめてください。</div></details><details><summary>本人に内緒で相談してもいいですか？</summary><div>家族だけで相談すること自体は問題ありません。ただ、あとで本人に知られて信頼が揺らぐこともあるため、相談したことをどう伝えるかも、相談の場で一緒に考えてもらうとよいと思います。</div></details><details><summary>学校に相談すると、子どもの評価に響きませんか？</summary><div>心配な場合は、まずスクールカウンセラーに相談したい内容を伝え、担任の先生と情報をどこまで共有するかを確かめてから話すと安心です。</div></details><details><summary>ゲーム依存の相談は、病院なら何科に行けばいいですか？</summary><div>児童精神科や精神科、ネット・ゲーム・スマホ依存の専門外来が窓口になります。どこに行けばよいか迷うときは、かかりつけの小児科や地域の精神保健福祉センターに相談して、紹介してもらう方法もあります。</div></details><details><summary>オンラインで相談できるところはありますか？</summary><div>電話相談を受けている公的な窓口のほか、オンラインで家族の相談を受けている民間のカウンセリングもあります。Minookでも、ご家族だけのオンライン相談をお受けしています。</div></details></div>
+    <aside class="crisis" id="crisis"><h2>いま、危険を感じているときは</h2><p>ご本人やご家族の命や安全に関わる状況では、このコラムを読むよりも先に、すぐに相談してください。</p><table><tr><th>命に関わる緊急時</th><td><b>119番（救急）／110番（警察）</b></td></tr><tr><th>#いのちSOS</th><td><b>0120-061-338</b><small>24時間・毎日</small></td></tr><tr><th>よりそいホットライン</th><td><b>0120-279-338</b><small>24時間（福島県からは 0120-279-226）</small></td></tr><tr><th>24時間子供SOSダイヤル</th><td><b>0120-0-78310</b><small>24時間・無料。子どもと保護者の相談</small></td></tr><tr><th>児童相談所虐待対応ダイヤル</th><td><b>189</b><small>24時間・無料</small></td></tr></table><p class="small">番号・受付時間は2026年10月14日時点のものです。</p></aside>
+    <div class="cta-end"><div class="cta strong"><p class="cta-k">初回30分無料</p><p>ひとりで抱えず、まずは30分話してみませんか。ご家族だけのご相談もお受けしています。</p><a href="../reserve.html#first" class="btn" data-cta="end">相談の予約をする</a></div></div>
+    <div class="sp-only-side"><div class="op"><p class="side-h">運営者</p><div class="op-in"><img src="../img/counselor.jpg" alt="" width="56" height="56" loading="lazy"><div><p class="op-name">安藤 令奈<span>公認心理師</span></p><p class="op-sum">久里浜医療センター「インターネット／ゲーム依存の診断・治療等に関する研修」「ネット、ゲーム、スマホ依存の予防・対応に関する研修」修了。東京大学大学院 修了。</p><a href="../index.html#counselor">プロフィールを見る</a></div></div></div><div class="rel"><p class="side-h">あわせて読みたい</p><ul><li><a href="smartphone-rules.html">中学生のスマホルールが守られない理由｜続く決め方とテンプレート</a></li><li><a href="smartphone-confiscation.html">スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと</a></li></ul></div></div>
+  </article>
+  <aside class="rail"><div class="sticky"><div class="cta strong"><p class="cta-k">初回30分無料</p><p>ひとりで抱えず、まずは30分話してみませんか。ご家族だけのご相談もお受けしています。</p><a href="../reserve.html#first" class="btn" data-cta="rail">相談の予約をする</a></div><div class="op"><p class="side-h">運営者</p><div class="op-in"><img src="../img/counselor.jpg" alt="" width="56" height="56" loading="lazy"><div><p class="op-name">安藤 令奈<span>公認心理師</span></p><p class="op-sum">久里浜医療センター「インターネット／ゲーム依存の診断・治療等に関する研修」「ネット、ゲーム、スマホ依存の予防・対応に関する研修」修了。東京大学大学院 修了。</p><a href="../index.html#counselor">プロフィールを見る</a></div></div></div><div class="rel"><p class="side-h">あわせて読みたい</p><ul><li><a href="smartphone-rules.html">中学生のスマホルールが守られない理由｜続く決め方とテンプレート</a></li><li><a href="smartphone-confiscation.html">スマホ・ゲームの取り上げは逆効果？ 決めておきたい3つのこと</a></li></ul></div></div></aside>
+</div>
+</main>
+<footer class="ft"><div class="in">
+  <div>
+    <a href="../index.html" class="logo">MINOOK</a>
+    <nav aria-label="フッター">
+      <a href="../index.html">トップ</a><a href="index.html">コラム一覧</a><a href="about-ai.html">このコラムの作り方</a>
+      <a href="../legal/tokushoho.html">特定商取引法に基づく表記</a><a href="../legal/terms.html">利用規約</a><a href="../legal/privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+  <small>© 2026 Minook</small>
+</div></footer>
+<script src="assets/column.js" defer></script>
+</body>
+</html>
